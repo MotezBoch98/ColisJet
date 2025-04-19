@@ -43,4 +43,4 @@ export const { auth, signIn, signOut } = NextAuth({
   ],
 });
 
-//this is just for pushing
+//this is just for pushing the user to the database
