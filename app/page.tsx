@@ -32,7 +32,7 @@ export default function Page() {
             alt="Dashboard desktop view"
           />
           <Image
-            src="/hero-mobile.png"
+            src="/hero-desktop.jpg"
             width={560}
             height={620}
             className="block md:hidden"
