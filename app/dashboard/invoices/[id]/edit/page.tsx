@@ -5,17 +5,16 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 export async function generateMetadata(props: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }): Promise<Metadata> {
-  const id = props.params.id;
+  const { id } = await props.params; // Await the params
   return {
-    title: `Edit Invoice ${id} | Acme Dashboard`, // Or your preferred title
+    title: `Edit Invoice ${id} | ColisJet Dashboard`, // Or your preferred title
   };
 }
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
-  const params = await props.params;
-  const id = params.id;
+  const { id } = await props.params; // Await the params
   const [invoice, customers] = await Promise.all([
     fetchInvoiceById(id),
     fetchCustomers(),

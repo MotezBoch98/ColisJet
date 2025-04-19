@@ -4,7 +4,7 @@ import { fetchCustomers } from '@/app/lib/data';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Create Invoice | Acme Dashboard', // Or your preferred title
+  title: 'Create Invoice | ColisJet Dashboard', // Or your preferred title
 };
  
 export default async function Page() {

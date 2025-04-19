@@ -11,7 +11,7 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Dashboard | Acme Dashboard', // Or your preferred title
+  title: 'Dashboard | ColisJet Dashboard', // Or your preferred title
 };
 
 export default async function Page() {
