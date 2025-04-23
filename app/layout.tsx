@@ -1,16 +1,15 @@
 import "@/app/ui/global.css";
 import { inter } from "@/app/ui/fonts";
-import { Metadata } from 'next';
- 
+import { Metadata } from "next";
+import Footer from "./ui/footer";
+
 export const metadata: Metadata = {
   title: {
-    template: '%s',
-    default: 'ColisJet Dashboard',
+    template: "%s",
+    default: "ColisJet Dashboard",
   },
-  description: 'The official Next.js Learn Dashboard built with App Router.',
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  description: "The web app for tracking your deliveries",
 };
- 
 
 export default function RootLayout({
   children,
@@ -19,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
