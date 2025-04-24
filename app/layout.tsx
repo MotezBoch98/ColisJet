@@ -1,3 +1,4 @@
+// /app/layout.tsx
 import "@/app/ui/global.css";
 import { inter } from "@/app/ui/fonts";
 import { Metadata } from "next";
@@ -17,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" className="h-full">
+      <body
+        className={`${inter.className} antialiased flex flex-col min-h-full`}
+      >
         {children}
         <Footer />
       </body>

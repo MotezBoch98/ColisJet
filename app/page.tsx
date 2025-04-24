@@ -1,15 +1,18 @@
+// /app/page.tsx
 import Navbar from "./ui/navbar";
-import HeroSection from "./ui/landing/hero-section";
-import ImageSection from "./ui/landing/image-hero-section";
+import HeroSection from "./ui/landing-page/hero-section";
+import ImageSection from "./ui/landing-page/image-hero-section";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
+    <div className="flex flex-1 flex-col">
       <Navbar />
-      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <HeroSection />
-        <ImageSection />
-      </div>
-    </main>
+      <main className="flex-1 p-6">
+        <div className="mt-4 flex flex-1 flex-col gap-4 md:flex-row">
+          <HeroSection />
+          <ImageSection />
+        </div>
+      </main>
+    </div>
   );
 }
