@@ -1,6 +1,5 @@
 // /app/dashboard/layout.tsx
-import SideNav from "@/app/ui/dashboard/sidenav";
-import Footer from "@/app/ui/footer";
+import SideNav from "@/app/ui/dashboard/sidenav"
 
 export const experimental_ppr = true;
 
