@@ -2,6 +2,9 @@
 import Navbar from "./ui/navbar";
 import HeroSection from "./ui/landing-page/hero-section";
 import ImageSection from "./ui/landing-page/image-hero-section";
+import ServiceHeroSection from "./ui/landing-page/service-hero-section";
+import TestimonialsSection from "./ui/landing-page/testimonials-section";
+import StatsSection from "./ui/landing-page/stats-section";
 
 export default function Page() {
   return (
@@ -12,6 +15,9 @@ export default function Page() {
           <HeroSection />
           <ImageSection />
         </div>
+        <ServiceHeroSection />
+        <StatsSection />
+        <TestimonialsSection />
       </main>
     </div>
   );

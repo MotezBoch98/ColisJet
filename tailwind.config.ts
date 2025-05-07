@@ -11,13 +11,6 @@ const config: Config = {
       gridTemplateColumns: {
         "13": "repeat(13, minmax(0, 1fr))",
       },
-      colors: {
-        gray: {
-          400: "#9CA3AF", // cool, medium gray
-          500: "#6B7280", // classic “500” gray
-          600: "#4B5563", // darker accent
-        },
-      },
       keyframes: {
         shimmer: {
           "100%": {

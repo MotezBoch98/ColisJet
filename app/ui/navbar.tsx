@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-900 p-2">
+    <nav className="bg-gray-900 px-4 py-3 shadow-md">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <ColisJetLogo />
@@ -20,9 +20,9 @@ export default function Navbar() {
             className="text-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-400"
           >
             {isOpen ? (
-              <XMarkIcon className="h-9 w-9 mx-4" />
+              <XMarkIcon className="h-8 w-8 mx-2" />
             ) : (
-              <Bars3Icon className="h-9 w-9 mx-4" />
+              <Bars3Icon className="h-8 w-8 mx-2" />
             )}
           </button>
         </div>
@@ -33,7 +33,7 @@ export default function Navbar() {
             isOpen ? "translate-x-0" : "-translate-x-full"
           } md:static md:translate-x-0 md:flex md:h-auto md:w-auto md:items-center`}
         >
-          <div className="flex h-full flex-col items-center justify-center space-y-6 md:flex-row md:space-y-0 md:space-x-4">
+          <div className="flex h-full flex-col items-center justify-center space-y-6 md:flex-row md:space-y-0 md:space-x-8">
             {/* Close Button (Mobile Only) */}
             {isOpen && (
               <button
@@ -44,34 +44,46 @@ export default function Navbar() {
               </button>
             )}
 
-            {/* Links */}
+            {/* Links with animated underline */}
             <Link
               href="/"
-              className="text-lg font-medium text-white transition-colors hover:text-yellow-400"
+              className="text-base tracking-wide font-medium text-white uppercase relative group"
               onClick={() => setIsOpen(false)}
             >
-              Home
+              <span className="transition-colors hover:text-yellow-400">
+                Acceuil
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
             <Link
               href="/about"
-              className="text-lg font-medium text-white transition-colors hover:text-yellow-400"
+              className="text-base tracking-wide font-medium text-white uppercase relative group"
               onClick={() => setIsOpen(false)}
             >
-              About Us
+              <span className="transition-colors hover:text-yellow-400">
+                About Us
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
             <Link
               href="/services"
-              className="text-lg font-medium text-white transition-colors hover:text-yellow-400"
+              className="text-base tracking-wide font-medium text-white uppercase relative group"
               onClick={() => setIsOpen(false)}
             >
-              Services
+              <span className="transition-colors hover:text-yellow-400">
+                Services
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
             <Link
               href="/get-started"
-              className="text-lg font-medium text-white transition-colors hover:text-yellow-400"
+              className="text-base tracking-wide font-medium text-white uppercase relative group"
               onClick={() => setIsOpen(false)}
             >
-              Get Started
+              <span className="transition-colors hover:text-yellow-400">
+                Contact
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
             </Link>
           </div>
         </div>
