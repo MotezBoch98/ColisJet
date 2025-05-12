@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Shield, Clock, Award, ThumbsUp } from "lucide-react";
 
 export default function TrustBadgesSection() {
